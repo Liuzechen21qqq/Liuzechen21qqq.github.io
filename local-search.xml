@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>pointers</title>
+    <link href="/2025/03/11/pointers/"/>
+    <url>/2025/03/11/pointers/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Introduction-to-pointers"><a href="#Introduction-to-pointers" class="headerlink" title="Introduction to pointers"></a>Introduction to pointers</h2><p><em><strong>int - 4 bytes</strong></em></p><p><em><strong>char - 1 byte</strong></em></p><p><em><strong>float - 4 bytes</strong></em></p><p><em><strong>double - 8 bytes</strong></em></p><hr><h3 id="pointers"><a href="#pointers" class="headerlink" title="pointers"></a>pointers</h3><p>pointers - variables that store address of another variable.</p><hr><p><img src="/2025/03/11/pointers/1.png"></p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">int</span> a;<br><span class="hljs-type">int</span> *p;<br>p = &amp;a;<br>a = <span class="hljs-number">5</span>;<br><span class="hljs-built_in">printf</span>(p) <span class="hljs-comment">//204</span><br><span class="hljs-built_in">printf</span>(&amp;a) <span class="hljs-comment">//204</span><br><span class="hljs-built_in">printf</span>(&amp;p) <span class="hljs-comment">//64</span><br><span class="hljs-built_in">print</span>(*p) <span class="hljs-comment">//5 ==&gt;derefrencing</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>C Language</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>helloworld</title>
     <link href="/2025/03/11/chelloworld/"/>
     <url>/2025/03/11/chelloworld/</url>

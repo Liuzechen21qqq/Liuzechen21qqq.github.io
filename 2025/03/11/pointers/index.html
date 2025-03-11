@@ -19,21 +19,23 @@
   <meta name="author" content="Liu Zechen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="第一个程序12345#include &lt;stdio.h&gt;int main()&#123;    printf(&quot;helloworld!&quot;);    return 0;&#125;  ++i &amp;&amp; i++区别1234567#include &lt;stdio.h&gt;int main()&#123;    int i &#x3D; 1, j &#x3D; 1;    p">
+    <meta name="description" content="Introduction to pointersint - 4 bytes char - 1 byte float - 4 bytes double - 8 bytes  pointerspointers - variables that store address of another variable.   12345678int a;int *p;p &#x3D; &amp;a;a &#x3D; 5;print">
 <meta property="og:type" content="article">
-<meta property="og:title" content="helloworld">
-<meta property="og:url" content="http://example.com/2025/03/11/chelloworld/index.html">
+<meta property="og:title" content="pointers">
+<meta property="og:url" content="http://example.com/2025/03/11/pointers/index.html">
 <meta property="og:site_name" content="Liu Zechen&#39;s Blog">
-<meta property="og:description" content="第一个程序12345#include &lt;stdio.h&gt;int main()&#123;    printf(&quot;helloworld!&quot;);    return 0;&#125;  ++i &amp;&amp; i++区别1234567#include &lt;stdio.h&gt;int main()&#123;    int i &#x3D; 1, j &#x3D; 1;    p">
+<meta property="og:description" content="Introduction to pointersint - 4 bytes char - 1 byte float - 4 bytes double - 8 bytes  pointerspointers - variables that store address of another variable.   12345678int a;int *p;p &#x3D; &amp;a;a &#x3D; 5;print">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2025-03-11T03:53:14.000Z">
-<meta property="article:modified_time" content="2025-03-11T11:34:46.745Z">
+<meta property="og:image" content="http://example.com/2025/03/11/pointers/1.png">
+<meta property="article:published_time" content="2025-03-11T13:49:30.000Z">
+<meta property="article:modified_time" content="2025-03-11T14:10:06.669Z">
 <meta property="article:author" content="Liu Zechen">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/2025/03/11/pointers/1.png">
   
   
   
-  <title>helloworld - Liu Zechen&#39;s Blog</title>
+  <title>pointers - Liu Zechen&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -211,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="helloworld"></span>
+            <span id="subtitle" data-typed-text="pointers"></span>
           
         </div>
 
@@ -222,8 +224,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-03-11 11:53" pubdate>
-          March 11, 2025 am
+        <time datetime="2025-03-11 21:49" pubdate>
+          March 11, 2025 pm
         </time>
       </span>
     
@@ -234,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          76 words
+          27 words
         
       </span>
     
@@ -282,18 +284,20 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">helloworld</h1>
+            <h1 id="seo-header">pointers</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序"></a>第一个程序</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span>&#123;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;helloworld!&quot;</span>);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h3 id="i-i-区别"><a href="#i-i-区别" class="headerlink" title="++i &amp;&amp; i++区别"></a>++i &amp;&amp; i++区别</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span>&#123;<br>    <span class="hljs-type">int</span> i = <span class="hljs-number">1</span>, j = <span class="hljs-number">1</span>;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;i++ = %d \n&quot;</span>, i++);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;++j = %d \n&quot;</span>, ++j);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>输出结果如下:</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c">i++ = <span class="hljs-number">1</span><br>++j = <span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
-
-<p>在CPP中，一般使用<code>++i</code>,代码性能较高。</p>
+                <h2 id="Introduction-to-pointers"><a href="#Introduction-to-pointers" class="headerlink" title="Introduction to pointers"></a>Introduction to pointers</h2><p><em><strong>int - 4 bytes</strong></em></p>
+<p><em><strong>char - 1 byte</strong></em></p>
+<p><em><strong>float - 4 bytes</strong></em></p>
+<p><em><strong>double - 8 bytes</strong></em></p>
+<hr>
+<h3 id="pointers"><a href="#pointers" class="headerlink" title="pointers"></a>pointers</h3><p>pointers - variables that store address of another variable.</p>
+<hr>
+<p><img src="/2025/03/11/pointers/1.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">int</span> a;<br><span class="hljs-type">int</span> *p;<br>p = &amp;a;<br>a = <span class="hljs-number">5</span>;<br><span class="hljs-built_in">printf</span>(p) <span class="hljs-comment">//204</span><br><span class="hljs-built_in">printf</span>(&amp;a) <span class="hljs-comment">//204</span><br><span class="hljs-built_in">printf</span>(&amp;p) <span class="hljs-comment">//64</span><br><span class="hljs-built_in">print</span>(*p) <span class="hljs-comment">//5 ==&gt;derefrencing</span><br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -332,8 +336,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>helloworld</div>
-      <div>http://example.com/2025/03/11/chelloworld/</div>
+      <div>pointers</div>
+      <div>http://example.com/2025/03/11/pointers/</div>
     </div>
     <div class="license-meta">
       
@@ -382,18 +386,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/03/11/pointers/" title="pointers">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">pointers</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/03/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%AA%E8%AE%BA/" title="DS绪论">
-                        <span class="hidden-mobile">DS绪论</span>
+                      <a href="/2025/03/11/chelloworld/" title="helloworld">
+                        <span class="hidden-mobile">helloworld</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
