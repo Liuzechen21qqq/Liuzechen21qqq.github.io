@@ -19,16 +19,17 @@
   <meta name="author" content="Liu Zechen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Introduction to pointersint - 4 bytes char - 1 byte float - 4 bytes double - 8 bytes  pointerspointers - variables that store address of another variable.   12345678int a;int *p;p &#x3D; &amp;a;a &#x3D; 5;print">
+    <meta name="description" content="Introduction to pointersint - 4 bytes char - 1 byte float - 4 bytes double - 8 bytes  pointerspointers - variables that store address of another variable.   1234567891011int a;int *p;p &#x3D; &amp;a;a &#x3D; 5;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pointers">
 <meta property="og:url" content="http://example.com/2025/03/11/pointers/index.html">
 <meta property="og:site_name" content="Liu Zechen&#39;s Blog">
-<meta property="og:description" content="Introduction to pointersint - 4 bytes char - 1 byte float - 4 bytes double - 8 bytes  pointerspointers - variables that store address of another variable.   12345678int a;int *p;p &#x3D; &amp;a;a &#x3D; 5;print">
+<meta property="og:description" content="Introduction to pointersint - 4 bytes char - 1 byte float - 4 bytes double - 8 bytes  pointerspointers - variables that store address of another variable.   1234567891011int a;int *p;p &#x3D; &amp;a;a &#x3D; 5;">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2025/03/11/pointers/1.png">
+<meta property="og:image" content="http://example.com/2025/03/11/pointers/2.png">
 <meta property="article:published_time" content="2025-03-11T13:49:30.000Z">
-<meta property="article:modified_time" content="2025-03-11T14:10:06.669Z">
+<meta property="article:modified_time" content="2025-03-11T14:30:39.606Z">
 <meta property="article:author" content="Liu Zechen">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/2025/03/11/pointers/1.png">
@@ -236,7 +237,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          27 words
+          99 words
         
       </span>
     
@@ -297,7 +298,9 @@
 <h3 id="pointers"><a href="#pointers" class="headerlink" title="pointers"></a>pointers</h3><p>pointers - variables that store address of another variable.</p>
 <hr>
 <p><img src="/2025/03/11/pointers/1.png" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">int</span> a;<br><span class="hljs-type">int</span> *p;<br>p = &amp;a;<br>a = <span class="hljs-number">5</span>;<br><span class="hljs-built_in">printf</span>(p) <span class="hljs-comment">//204</span><br><span class="hljs-built_in">printf</span>(&amp;a) <span class="hljs-comment">//204</span><br><span class="hljs-built_in">printf</span>(&amp;p) <span class="hljs-comment">//64</span><br><span class="hljs-built_in">print</span>(*p) <span class="hljs-comment">//5 ==&gt;derefrencing</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">int</span> a;<br><span class="hljs-type">int</span> *p;<br>p = &amp;a;<br>a = <span class="hljs-number">5</span>;<br><span class="hljs-built_in">printf</span>(p) <span class="hljs-comment">//204</span><br><span class="hljs-built_in">printf</span>(&amp;a) <span class="hljs-comment">//204</span><br><span class="hljs-built_in">printf</span>(&amp;p) <span class="hljs-comment">//64</span><br><span class="hljs-built_in">print</span>(*p) <span class="hljs-comment">//5 ==&gt;derefrencing</span><br>*p = <span class="hljs-number">8</span> <br><span class="hljs-built_in">printf</span>(a) <span class="hljs-comment">// 8</span><br><span class="hljs-built_in">printf</span>(*p) <span class="hljs-comment">//8</span><br></code></pre></td></tr></table></figure>
+<h3 id="working-with-pointers"><a href="#working-with-pointers" class="headerlink" title="working with pointers"></a>working with pointers</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span>&#123;<br>	<span class="hljs-type">int</span> a = <span class="hljs-number">2</span>;<br>	<span class="hljs-type">int</span> *p;<br>	p = &amp;a;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>,p);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>,*p);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>,&amp;a); <span class="hljs-comment">//&amp;a = address of a</span><br>	<br>	*p = <span class="hljs-number">66</span>;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a = %d\n&quot;</span>,a);<br>	<br>	<span class="hljs-type">int</span> b = <span class="hljs-number">20</span>;<br>	*p = b; <span class="hljs-comment">//will the address in p change to point b? actually no!</span><br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a = %d\n&quot;</span>,a); <span class="hljs-comment">//Only modify the value of a</span><br>	<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>输出结果如下，<br><img src="/2025/03/11/pointers/2.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
