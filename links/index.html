@@ -74,7 +74,9 @@
 
 
   
+  
 <meta name="generator" content="Hexo 7.3.0"></head>
+
 
 
 <body>
@@ -83,7 +85,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 30vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -166,8 +168,8 @@
           
             <li class="nav-item">
               <a class="nav-link" href="/links/" target="_self">
-                <i class="iconfont icon-link-fill"></i>
-                <span>Links</span>
+                <i class="iconfont icon-note"></i>
+                <span>Others</span>
               </a>
             </li>
           
@@ -232,17 +234,17 @@
   
     
     <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" class="card-body hover-with-bg" target="_blank" rel="noopener">
+      <a href="https://www.runoob.com/" class="card-body hover-with-bg" target="_blank" rel="noopener">
         <div class="card-content">
           
             <div class="link-avatar my-auto">
-              <img src="/img/favicon.png" srcset="/img/loading.gif" lazyload alt="Fluid Repo"
+              <img src="/images/rc.png" srcset="/img/loading.gif" lazyload alt="RUNOOB"
                    onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
             </div>
           
           <div class="link-text">
-            <div class="link-title">Fluid Repo</div>
-            <div class="link-intro">主题 GitHub 仓库</div>
+            <div class="link-title">RUNOOB</div>
+            <div class="link-intro">菜鸟教程</div>
           </div>
         </div>
       </a>
@@ -257,37 +259,66 @@
   </div>
 
 
+<div class="countdown-container">
+    <p>距离考研还剩:</p>
+    <div id="countdown"></div>
+</div>
 
-  
-  
-    <article id="comments" lazyload>
-      
-  <div id="valine"></div>
-  <script type="text/javascript">
-    Fluid.utils.loadComments('#valine', function() {
-      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
-        var options = Object.assign(
-          {"appId":"7g6pyFPlCglxOifxAbazAvhT-gzGzoHsz","appKey":"3BQwn1RrjyyBTZStKGw4935S","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":true,"recordIP":true,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
-          {
-            el: "#valine",
-            path: window.location.pathname
-          }
-        )
-        new Valine(options);
-        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
-          var imgSelector = '#valine .vcontent img:not(.vemoji)';
-          Fluid.plugins.imageCaption(imgSelector);
-          Fluid.plugins.fancyBox(imgSelector);
-        })
-      });
-    });
-  </script>
-  <noscript>Please enable JavaScript to view the comments</noscript>
+<script>
+    // 设定目标日期（例如：2025年12月31日）
+    var targetDate = new Date("December 20,25 23:59:59").getTime();
 
+    // 更新倒数日期的函数
+    function updateCountdown() {
+        var now = new Date().getTime();  // 获取当前时间
+        var distance = targetDate - now;  // 计算距离目标日期的毫秒数
 
-    </article>
-  
+        // 计算天数、小时、分钟和秒数
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+        // 显示倒数日
+        document.getElementById("countdown").innerHTML = days + "天 " + hours + "小时 "
+            + minutes + "分钟 " + seconds + "秒 ";
+
+        // 如果目标日期已经过去
+        if (distance < 0) {
+            clearInterval(interval);  // 停止倒数
+            document.getElementById("countdown").innerHTML = "目标日期已到！";
+        }
+    }
+
+    // 每秒更新一次倒数
+    var interval = setInterval(updateCountdown, 1000);
+</script>
+
+<style>
+    .countdown-container {
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+        margin-top: 30px;
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .countdown-container h2 {
+        font-size: 28px;
+        color: #333;
+    }
+    .countdown-container p {
+        font-size: 20px;
+        color: #666;
+    }
+    #countdown {
+        font-size: 24px;
+        font-weight: bold;
+        color: #e74c3c;
+        margin-top: 10px;
+    }
+</style>
 
 
               </div>
@@ -400,7 +431,71 @@
 <script  src="/js/boot.js" ></script>
 
 
-  
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snow Effect</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: auto; /* 修改为 auto 以允许页面滚动 */
+            background: #000; /* 设置背景颜色 */
+        }
+        .snowflake {
+            position:absolute; /*修改为 fixed 以确保雪花在整个页面飘落 */
+            top: -10px;
+            color: white;
+            font-size: 1em;
+            user-select: none;
+            pointer-events: none;
+            z-index: 1000;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const snowflakeCount = 30; // 减少雪花数量
+            const snowflakes = [];
+
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.innerHTML = '&#10052;';
+                snowflake.style.left = `${Math.random() * window.innerWidth}px`;
+                snowflake.style.animationDuration = `${Math.random() * 10 + 10}s`; // 减慢雪花速度
+                snowflake.style.fontSize = `${Math.random() * 10 + 10}px`;
+                snowflake.style.opacity = `${Math.random()}`;
+                document.body.appendChild(snowflake);
+                snowflakes.push(snowflake);
+            }
+
+            function animateSnowflakes() {
+                snowflakes.forEach(snowflake => {
+                    snowflake.style.top = `${parseFloat(snowflake.style.top) + 1}px`;
+                    if (parseFloat(snowflake.style.top) > window.innerHeight) {
+                        snowflake.style.top = '-10px';
+                        snowflake.style.left = `${Math.random() * window.innerWidth}px`;
+                    }
+                });
+                requestAnimationFrame(animateSnowflakes);
+            }
+
+            animateSnowflakes();
+        });
+    </script>
+</body>
+</html>
+
+
 
   <noscript>
     <div class="noscript-warning">Blog works best with JavaScript enabled</div>

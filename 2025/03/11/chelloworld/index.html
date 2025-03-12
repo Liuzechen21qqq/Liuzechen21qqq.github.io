@@ -84,7 +84,9 @@
 
 
   
+  
 <meta name="generator" content="Hexo 7.3.0"></head>
+
 
 
 <body>
@@ -176,8 +178,8 @@
           
             <li class="nav-item">
               <a class="nav-link" href="/links/" target="_self">
-                <i class="iconfont icon-link-fill"></i>
-                <span>Links</span>
+                <i class="iconfont icon-note"></i>
+                <span>Others</span>
               </a>
             </li>
           
@@ -686,7 +688,71 @@
 <script  src="/js/boot.js" ></script>
 
 
-  
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snow Effect</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: auto; /* 修改为 auto 以允许页面滚动 */
+            background: #000; /* 设置背景颜色 */
+        }
+        .snowflake {
+            position:absolute; /*修改为 fixed 以确保雪花在整个页面飘落 */
+            top: -10px;
+            color: white;
+            font-size: 1em;
+            user-select: none;
+            pointer-events: none;
+            z-index: 1000;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const snowflakeCount = 30; // 减少雪花数量
+            const snowflakes = [];
+
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.innerHTML = '&#10052;';
+                snowflake.style.left = `${Math.random() * window.innerWidth}px`;
+                snowflake.style.animationDuration = `${Math.random() * 10 + 10}s`; // 减慢雪花速度
+                snowflake.style.fontSize = `${Math.random() * 10 + 10}px`;
+                snowflake.style.opacity = `${Math.random()}`;
+                document.body.appendChild(snowflake);
+                snowflakes.push(snowflake);
+            }
+
+            function animateSnowflakes() {
+                snowflakes.forEach(snowflake => {
+                    snowflake.style.top = `${parseFloat(snowflake.style.top) + 1}px`;
+                    if (parseFloat(snowflake.style.top) > window.innerHeight) {
+                        snowflake.style.top = '-10px';
+                        snowflake.style.left = `${Math.random() * window.innerWidth}px`;
+                    }
+                });
+                requestAnimationFrame(animateSnowflakes);
+            }
+
+            animateSnowflakes();
+        });
+    </script>
+</body>
+</html>
+
+
 
   <noscript>
     <div class="noscript-warning">Blog works best with JavaScript enabled</div>
