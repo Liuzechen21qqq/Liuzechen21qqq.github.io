@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>CN1</title>
+    <link href="/2025/03/12/CN1/"/>
+    <url>/2025/03/12/CN1/</url>
+    
+    <content type="html"><![CDATA[<h2 id="网络、互连网、互联网"><a href="#网络、互连网、互联网" class="headerlink" title="网络、互连网、互联网"></a>网络、互连网、互联网</h2><ul><li>网络是由若干结点和连接这些结点的链路组成</li><li>互连网:多个计算机网络互连而成，可以使用任意协议</li><li>互联网:全球最大的、开放的、由众多网络和路由器互连而成的特定的计算机网络。使用TCP&#x2F;IP族为通信规则。</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Computer Network</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>pointers</title>
     <link href="/2025/03/11/pointers/"/>
     <url>/2025/03/11/pointers/</url>

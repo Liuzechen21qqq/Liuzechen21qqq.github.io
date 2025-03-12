@@ -276,6 +276,60 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/2025/03/12/CN1/" target="_self">
+          CN1
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/03/12/CN1/" target="_self">
+        <div>
+          网络、互连网、互联网 网络是由若干结点和连接这些结点的链路组成 互连网:多个计算机网络互连而成，可以使用任意协议 互联网:全球最大的、开放的、由众多网络和路由器互连而成的特定的计算机网络。使用TCP&#x2F;IP族为通信规则。
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-03-12 21:18" pubdate>
+              2025-03-12
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Computer-Network/" class="category-chain-item">Computer Network</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/2025/03/11/pointers/" target="_self">
           pointers
         </a>
@@ -715,7 +769,7 @@
                         return result;
                     };
                     
-                    const groupedData = groupByYear([["2025-03-10",4],["2025-03-11",2]]);
+                    const groupedData = groupByYear([["2025-03-10",4],["2025-03-11",2],["2025-03-12",1]]);
                     const years = Object.keys(groupedData).reverse();
                     
                     var initYear = parseInt(heatmapChartDom.getAttribute('year')) || new Date().getFullYear();
@@ -838,7 +892,7 @@
                         series: [{
                             name: 'Articles',
                             type: 'line',
-                            data: [6],
+                            data: [7],
                             smooth: true,
                             lineStyle: { color: '#FF9A8B', width: 2 },
                             itemStyle: { color: '#FF9A8B' },
@@ -911,13 +965,13 @@
                         xAxis: { type: 'value', splitLine: { lineStyle: { type: 'dashed', color: '#ccc' } } },
                         yAxis: { 
                             type: 'category', 
-                            data: [{"name":"C Language","value":2},{"name":"Operating System","value":1},{"name":"Data Structure","value":1}].map(category => category.name).reverse(), 
+                            data: [{"name":"C Language","value":2},{"name":"Operating System","value":1},{"name":"Data Structure","value":1},{"name":"Computer Network","value":1}].map(category => category.name).reverse(), 
                             axisLabel: { fontSize: 14, fontWeight: 'bold', fontFamily: 'Microsoft YaHei, SimSun, serif' }
                         },
                         series: [{
                             name: 'Category Count',
                             type: 'bar',
-                            data: [{"name":"C Language","value":2},{"name":"Operating System","value":1},{"name":"Data Structure","value":1}].map(category => category.value).reverse(),
+                            data: [{"name":"C Language","value":2},{"name":"Operating System","value":1},{"name":"Data Structure","value":1},{"name":"Computer Network","value":1}].map(category => category.value).reverse(),
                             label: {
                                 show: true,
                                 position: 'right',
@@ -966,7 +1020,7 @@
                         },
                         series: [{
                             type: 'tree',
-                            data: [{"name":"Categories","children":[{"name":"C Language","children":[],"count":2,"path":"C Language"},{"name":"Operating System","children":[],"count":1,"path":"Operating System"},{"name":"Data Structure","children":[],"count":1,"path":"Data Structure"}],"count":0,"path":""}],
+                            data: [{"name":"Categories","children":[{"name":"C Language","children":[],"count":2,"path":"C Language"},{"name":"Operating System","children":[],"count":1,"path":"Operating System"},{"name":"Data Structure","children":[],"count":1,"path":"Data Structure"},{"name":"Computer Network","children":[],"count":1,"path":"Computer Network"}],"count":0,"path":""}],
                             initialTreeDepth: -1,
                             top: '5%',
                             bottom: '10%',
