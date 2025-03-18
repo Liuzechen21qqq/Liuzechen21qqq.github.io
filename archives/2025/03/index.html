@@ -231,13 +231,19 @@
                 
 
 <div class="list-group">
-  <p class="h4">7 posts in total</p>
+  <p class="h4">8 posts in total</p>
   <hr>
   
   
     
       
       <p class="h5">2025</p>
+    
+    <a href="/2025/03/17/ustc%E6%9C%BA%E8%AF%95/" class="list-group-item list-group-item-action">
+      <time>03-17</time>
+      <div class="list-group-item-title">ustc机试</div>
+    </a>
+  
     
     <a href="/2025/03/12/CN1/" class="list-group-item list-group-item-action">
       <time>03-12</time>
@@ -478,7 +484,7 @@
                         return result;
                     };
                     
-                    const groupedData = groupByYear([["2025-03-10",4],["2025-03-11",2],["2025-03-12",1]]);
+                    const groupedData = groupByYear([["2025-03-10",4],["2025-03-11",2],["2025-03-12",1],["2025-03-17",1]]);
                     const years = Object.keys(groupedData).reverse();
                     
                     var initYear = parseInt(heatmapChartDom.getAttribute('year')) || new Date().getFullYear();
@@ -601,7 +607,7 @@
                         series: [{
                             name: 'Articles',
                             type: 'line',
-                            data: [7],
+                            data: [8],
                             smooth: true,
                             lineStyle: { color: '#FF9A8B', width: 2 },
                             itemStyle: { color: '#FF9A8B' },
@@ -674,13 +680,13 @@
                         xAxis: { type: 'value', splitLine: { lineStyle: { type: 'dashed', color: '#ccc' } } },
                         yAxis: { 
                             type: 'category', 
-                            data: [{"name":"C Language","value":2},{"name":"Operating System","value":1},{"name":"Data Structure","value":1},{"name":"Computer Network","value":1}].map(category => category.name).reverse(), 
+                            data: [{"name":"C Language","value":2},{"name":"Computer Network","value":1},{"name":"Operating System","value":1},{"name":"Data Structure","value":1}].map(category => category.name).reverse(), 
                             axisLabel: { fontSize: 14, fontWeight: 'bold', fontFamily: 'Microsoft YaHei, SimSun, serif' }
                         },
                         series: [{
                             name: 'Category Count',
                             type: 'bar',
-                            data: [{"name":"C Language","value":2},{"name":"Operating System","value":1},{"name":"Data Structure","value":1},{"name":"Computer Network","value":1}].map(category => category.value).reverse(),
+                            data: [{"name":"C Language","value":2},{"name":"Computer Network","value":1},{"name":"Operating System","value":1},{"name":"Data Structure","value":1}].map(category => category.value).reverse(),
                             label: {
                                 show: true,
                                 position: 'right',
@@ -729,7 +735,7 @@
                         },
                         series: [{
                             type: 'tree',
-                            data: [{"name":"Categories","children":[{"name":"C Language","children":[],"count":2,"path":"C Language"},{"name":"Operating System","children":[],"count":1,"path":"Operating System"},{"name":"Data Structure","children":[],"count":1,"path":"Data Structure"},{"name":"Computer Network","children":[],"count":1,"path":"Computer Network"}],"count":0,"path":""}],
+                            data: [{"name":"Categories","children":[{"name":"Computer Network","children":[],"count":1,"path":"Computer Network"},{"name":"C Language","children":[],"count":2,"path":"C Language"},{"name":"Operating System","children":[],"count":1,"path":"Operating System"},{"name":"Data Structure","children":[],"count":1,"path":"Data Structure"}],"count":0,"path":""}],
                             initialTreeDepth: -1,
                             top: '5%',
                             bottom: '10%',

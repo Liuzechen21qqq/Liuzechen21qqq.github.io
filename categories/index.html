@@ -293,6 +293,48 @@
     
     <div class="category row nomargin-x">
       <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Computer Network"
+        id="heading-1b75a42cad6ccbd48a6c682e9b3fd924" role="tab" data-toggle="collapse" href="#collapse-1b75a42cad6ccbd48a6c682e9b3fd924"
+        aria-expanded="false"
+      >
+        Computer Network
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/Computer-Network/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>1</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-1b75a42cad6ccbd48a6c682e9b3fd924"
+           role="tabpanel" aria-labelledby="heading-1b75a42cad6ccbd48a6c682e9b3fd924">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2025/03/12/CN1/" title="CN1"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">CN1</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Operating System"
         id="heading-64d354dc5879cf570ce7b4ef676e75bd" role="tab" data-toggle="collapse" href="#collapse-64d354dc5879cf570ce7b4ef676e75bd"
         aria-expanded="false"
@@ -363,48 +405,6 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">DS绪论</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Computer Network"
-        id="heading-1b75a42cad6ccbd48a6c682e9b3fd924" role="tab" data-toggle="collapse" href="#collapse-1b75a42cad6ccbd48a6c682e9b3fd924"
-        aria-expanded="false"
-      >
-        Computer Network
-        <span class="list-group-count"></span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-        <a href="/categories/Computer-Network/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
-          <span>1</span>
-        </a>
-      
-      <div class="category-collapse collapse " id="collapse-1b75a42cad6ccbd48a6c682e9b3fd924"
-           role="tabpanel" aria-labelledby="heading-1b75a42cad6ccbd48a6c682e9b3fd924">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/2025/03/12/CN1/" title="CN1"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">CN1</span>
         </a>
       
     
@@ -609,7 +609,7 @@
                         return result;
                     };
                     
-                    const groupedData = groupByYear([["2025-03-10",4],["2025-03-11",2],["2025-03-12",1]]);
+                    const groupedData = groupByYear([["2025-03-10",4],["2025-03-11",2],["2025-03-12",1],["2025-03-17",1]]);
                     const years = Object.keys(groupedData).reverse();
                     
                     var initYear = parseInt(heatmapChartDom.getAttribute('year')) || new Date().getFullYear();
@@ -732,7 +732,7 @@
                         series: [{
                             name: 'Articles',
                             type: 'line',
-                            data: [7],
+                            data: [8],
                             smooth: true,
                             lineStyle: { color: '#FF9A8B', width: 2 },
                             itemStyle: { color: '#FF9A8B' },
@@ -805,13 +805,13 @@
                         xAxis: { type: 'value', splitLine: { lineStyle: { type: 'dashed', color: '#ccc' } } },
                         yAxis: { 
                             type: 'category', 
-                            data: [{"name":"C Language","value":2},{"name":"Operating System","value":1},{"name":"Data Structure","value":1},{"name":"Computer Network","value":1}].map(category => category.name).reverse(), 
+                            data: [{"name":"C Language","value":2},{"name":"Computer Network","value":1},{"name":"Operating System","value":1},{"name":"Data Structure","value":1}].map(category => category.name).reverse(), 
                             axisLabel: { fontSize: 14, fontWeight: 'bold', fontFamily: 'Microsoft YaHei, SimSun, serif' }
                         },
                         series: [{
                             name: 'Category Count',
                             type: 'bar',
-                            data: [{"name":"C Language","value":2},{"name":"Operating System","value":1},{"name":"Data Structure","value":1},{"name":"Computer Network","value":1}].map(category => category.value).reverse(),
+                            data: [{"name":"C Language","value":2},{"name":"Computer Network","value":1},{"name":"Operating System","value":1},{"name":"Data Structure","value":1}].map(category => category.value).reverse(),
                             label: {
                                 show: true,
                                 position: 'right',
@@ -860,7 +860,7 @@
                         },
                         series: [{
                             type: 'tree',
-                            data: [{"name":"Categories","children":[{"name":"C Language","children":[],"count":2,"path":"C Language"},{"name":"Operating System","children":[],"count":1,"path":"Operating System"},{"name":"Data Structure","children":[],"count":1,"path":"Data Structure"},{"name":"Computer Network","children":[],"count":1,"path":"Computer Network"}],"count":0,"path":""}],
+                            data: [{"name":"Categories","children":[{"name":"Computer Network","children":[],"count":1,"path":"Computer Network"},{"name":"C Language","children":[],"count":2,"path":"C Language"},{"name":"Operating System","children":[],"count":1,"path":"Operating System"},{"name":"Data Structure","children":[],"count":1,"path":"Data Structure"}],"count":0,"path":""}],
                             initialTreeDepth: -1,
                             top: '5%',
                             bottom: '10%',
