@@ -865,7 +865,7 @@ H[分布式操作系统] --&gt; I[个人计算机操作系统]
                         return result;
                     };
                     
-                    const groupedData = groupByYear([["2025-03-10",4],["2025-03-11",2],["2025-03-12",1],["2025-03-17",1],["2025-03-28",1]]);
+                    const groupedData = groupByYear([["2025-03-10",4],["2025-03-11",2],["2025-03-12",1],["2025-03-17",1],["2025-03-28",3]]);
                     const years = Object.keys(groupedData).reverse();
                     
                     var initYear = parseInt(heatmapChartDom.getAttribute('year')) || new Date().getFullYear();
@@ -988,7 +988,7 @@ H[分布式操作系统] --&gt; I[个人计算机操作系统]
                         series: [{
                             name: 'Articles',
                             type: 'line',
-                            data: [9],
+                            data: [11],
                             smooth: true,
                             lineStyle: { color: '#FF9A8B', width: 2 },
                             itemStyle: { color: '#FF9A8B' },
@@ -1025,7 +1025,7 @@ H[分布式操作系统] --&gt; I[个人计算机操作系统]
                         series: [{
                             type: 'pie',
                             radius: '60%',
-                            data: [],
+                            data: [{"name":"Data Structure","value":1}],
                             label: {
                                 position: 'outside',
                                 formatter: '{b} {c} ({d}%)',
@@ -1039,7 +1039,7 @@ H[分布式操作系统] --&gt; I[个人计算机操作系统]
                         legend: {
                             bottom: '0',
                             left: 'center',
-                            data: [].map(tag => tag.name),
+                            data: [{"name":"Data Structure","value":1}].map(tag => tag.name),
                             textStyle: { fontSize: 14, fontWeight: 'bold', fontFamily: 'Microsoft YaHei, SimSun, serif' }
                         }
                     });

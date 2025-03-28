@@ -364,6 +364,12 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2025/03/28/ds%E4%BB%A3%E7%A0%81/" title="ds代码">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">ds代码</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
@@ -744,7 +750,7 @@
                         return result;
                     };
                     
-                    const groupedData = groupByYear([["2025-03-10",4],["2025-03-11",2],["2025-03-12",1],["2025-03-17",1],["2025-03-28",1]]);
+                    const groupedData = groupByYear([["2025-03-10",4],["2025-03-11",2],["2025-03-12",1],["2025-03-17",1],["2025-03-28",3]]);
                     const years = Object.keys(groupedData).reverse();
                     
                     var initYear = parseInt(heatmapChartDom.getAttribute('year')) || new Date().getFullYear();
@@ -867,7 +873,7 @@
                         series: [{
                             name: 'Articles',
                             type: 'line',
-                            data: [9],
+                            data: [11],
                             smooth: true,
                             lineStyle: { color: '#FF9A8B', width: 2 },
                             itemStyle: { color: '#FF9A8B' },
@@ -904,7 +910,7 @@
                         series: [{
                             type: 'pie',
                             radius: '60%',
-                            data: [],
+                            data: [{"name":"Data Structure","value":1}],
                             label: {
                                 position: 'outside',
                                 formatter: '{b} {c} ({d}%)',
@@ -918,7 +924,7 @@
                         legend: {
                             bottom: '0',
                             left: 'center',
-                            data: [].map(tag => tag.name),
+                            data: [{"name":"Data Structure","value":1}].map(tag => tag.name),
                             textStyle: { fontSize: 14, fontWeight: 'bold', fontFamily: 'Microsoft YaHei, SimSun, serif' }
                         }
                     });

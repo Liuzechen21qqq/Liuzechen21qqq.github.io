@@ -4,6 +4,38 @@
   
   
   <entry>
+    <title>a</title>
+    <link href="/2025/03/28/a/"/>
+    <url>/2025/03/28/a/</url>
+    
+    <content type="html"><![CDATA[<h3 id="关山难越，谁悲失路之人？"><a href="#关山难越，谁悲失路之人？" class="headerlink" title="关山难越，谁悲失路之人？"></a>关山难越，谁悲失路之人？</h3><p>我还是没有办法平静下来，这一切都让我无法接受。<br>呼吸如此沉重，甚至一句话都不想说。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ds代码</title>
+    <link href="/2025/03/28/ds%E4%BB%A3%E7%A0%81/"/>
+    <url>/2025/03/28/ds%E4%BB%A3%E7%A0%81/</url>
+    
+    <content type="html"><![CDATA[<h3 id="binary-search"><a href="#binary-search" class="headerlink" title="binary_search"></a>binary_search</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> <span class="hljs-title function_">binary_search</span><span class="hljs-params">(SqList L, Elemtype key)</span>&#123;<br>    <span class="hljs-type">int</span> low = <span class="hljs-number">0</span>; <span class="hljs-type">int</span> high = L.lentgh<span class="hljs-number">-1</span>;<br>    <span class="hljs-keyword">while</span>(low &lt;= high)&#123;<br>        <span class="hljs-type">int</span> mid = (low + high) / <span class="hljs-number">2</span>;<br>        <span class="hljs-keyword">if</span>(L.data[mid] == key)&#123;<br>            <span class="hljs-keyword">return</span> mid;<br>        &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(L.data[mid] &gt; key)&#123;<br>            high = mid - <span class="hljs-number">1</span>;<br>        &#125;<span class="hljs-keyword">else</span>&#123;<br>            low = mid + <span class="hljs-number">1</span>;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Data Structure</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>随笔</title>
     <link href="/2025/03/28/%E9%9A%8F%E7%AC%94/"/>
     <url>/2025/03/28/%E9%9A%8F%E7%AC%94/</url>

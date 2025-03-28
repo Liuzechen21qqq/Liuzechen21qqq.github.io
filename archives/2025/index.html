@@ -231,13 +231,25 @@
                 
 
 <div class="list-group">
-  <p class="h4">9 posts in total</p>
+  <p class="h4">11 posts in total</p>
   <hr>
   
   
     
       
       <p class="h5">2025</p>
+    
+    <a href="/2025/03/28/a/" class="list-group-item list-group-item-action">
+      <time>03-28</time>
+      <div class="list-group-item-title">a</div>
+    </a>
+  
+    
+    <a href="/2025/03/28/ds%E4%BB%A3%E7%A0%81/" class="list-group-item list-group-item-action">
+      <time>03-28</time>
+      <div class="list-group-item-title">ds代码</div>
+    </a>
+  
     
     <a href="/2025/03/28/%E9%9A%8F%E7%AC%94/" class="list-group-item list-group-item-action">
       <time>03-28</time>
@@ -286,14 +298,14 @@
       <div class="list-group-item-title">MyBlog</div>
     </a>
   
-    
-    <a href="/2025/03/10/hello-world/" class="list-group-item list-group-item-action">
-      <time>03-10</time>
-      <div class="list-group-item-title">Hello World</div>
-    </a>
-  
 </div>
 
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/archives/2025/page/2/#board">2</a><a class="extend next" rel="next" href="/archives/2025/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
 
 
 
@@ -490,7 +502,7 @@
                         return result;
                     };
                     
-                    const groupedData = groupByYear([["2025-03-10",4],["2025-03-11",2],["2025-03-12",1],["2025-03-17",1],["2025-03-28",1]]);
+                    const groupedData = groupByYear([["2025-03-10",4],["2025-03-11",2],["2025-03-12",1],["2025-03-17",1],["2025-03-28",3]]);
                     const years = Object.keys(groupedData).reverse();
                     
                     var initYear = parseInt(heatmapChartDom.getAttribute('year')) || new Date().getFullYear();
@@ -613,7 +625,7 @@
                         series: [{
                             name: 'Articles',
                             type: 'line',
-                            data: [9],
+                            data: [11],
                             smooth: true,
                             lineStyle: { color: '#FF9A8B', width: 2 },
                             itemStyle: { color: '#FF9A8B' },
@@ -650,7 +662,7 @@
                         series: [{
                             type: 'pie',
                             radius: '60%',
-                            data: [],
+                            data: [{"name":"Data Structure","value":1}],
                             label: {
                                 position: 'outside',
                                 formatter: '{b} {c} ({d}%)',
@@ -664,7 +676,7 @@
                         legend: {
                             bottom: '0',
                             left: 'center',
-                            data: [].map(tag => tag.name),
+                            data: [{"name":"Data Structure","value":1}].map(tag => tag.name),
                             textStyle: { fontSize: 14, fontWeight: 'bold', fontFamily: 'Microsoft YaHei, SimSun, serif' }
                         }
                     });
