@@ -241,6 +241,60 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/2025/03/10/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%BB%AA%E8%AE%BA/" target="_self">
+          OS绪论
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/03/10/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%BB%AA%E8%AE%BA/" target="_self">
+        <div>
+          计算机系统概述程序：存放在磁盘中的可执行文件，包括指令、数据等。    任务：程序执行需要加载到内存中，并配备CPU及其他所需资源，执行中的程序便成了一个任务。 操作系统的概念操作系统 (Operating System)是指控制和管理整个计算机系统的硬件和软件资源，合理地组织、调度计算机的工作与资源地分配，进而为用户和其他软件提供方便接口的环境地程序集合。  OS是计算机系统中最基本地系统软件。
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-03-10 19:46" pubdate>
+              2025-03-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Operating-System/" class="category-chain-item">Operating System</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/2025/03/10/hello-world/" target="_self">
           Hello World
         </a>
@@ -470,7 +524,7 @@
                         return result;
                     };
                     
-                    const groupedData = groupByYear([["2025-03-10",4],["2025-03-11",2],["2025-03-12",1],["2025-03-17",1],["2025-03-28",3]]);
+                    const groupedData = groupByYear([["2025-03-10",4],["2025-03-11",2],["2025-03-12",1],["2025-03-17",1],["2025-03-28",3],["2025-03-31",1]]);
                     const years = Object.keys(groupedData).reverse();
                     
                     var initYear = parseInt(heatmapChartDom.getAttribute('year')) || new Date().getFullYear();
@@ -593,7 +647,7 @@
                         series: [{
                             name: 'Articles',
                             type: 'line',
-                            data: [11],
+                            data: [12],
                             smooth: true,
                             lineStyle: { color: '#FF9A8B', width: 2 },
                             itemStyle: { color: '#FF9A8B' },
@@ -666,13 +720,13 @@
                         xAxis: { type: 'value', splitLine: { lineStyle: { type: 'dashed', color: '#ccc' } } },
                         yAxis: { 
                             type: 'category', 
-                            data: [{"name":"C Language","value":2},{"name":"Computer Network","value":1},{"name":"Operating System","value":1},{"name":"Data Structure","value":1}].map(category => category.name).reverse(), 
+                            data: [{"name":"C Language","value":2},{"name":"Computer Network","value":1},{"name":"Data Structure","value":1},{"name":"Operating System","value":1}].map(category => category.name).reverse(), 
                             axisLabel: { fontSize: 14, fontWeight: 'bold', fontFamily: 'Microsoft YaHei, SimSun, serif' }
                         },
                         series: [{
                             name: 'Category Count',
                             type: 'bar',
-                            data: [{"name":"C Language","value":2},{"name":"Computer Network","value":1},{"name":"Operating System","value":1},{"name":"Data Structure","value":1}].map(category => category.value).reverse(),
+                            data: [{"name":"C Language","value":2},{"name":"Computer Network","value":1},{"name":"Data Structure","value":1},{"name":"Operating System","value":1}].map(category => category.value).reverse(),
                             label: {
                                 show: true,
                                 position: 'right',
@@ -721,7 +775,7 @@
                         },
                         series: [{
                             type: 'tree',
-                            data: [{"name":"Categories","children":[{"name":"Computer Network","children":[],"count":1,"path":"Computer Network"},{"name":"C Language","children":[],"count":2,"path":"C Language"},{"name":"Operating System","children":[],"count":1,"path":"Operating System"},{"name":"Data Structure","children":[],"count":1,"path":"Data Structure"}],"count":0,"path":""}],
+                            data: [{"name":"Categories","children":[{"name":"Computer Network","children":[],"count":1,"path":"Computer Network"},{"name":"C Language","children":[],"count":2,"path":"C Language"},{"name":"Data Structure","children":[],"count":1,"path":"Data Structure"},{"name":"Operating System","children":[],"count":1,"path":"Operating System"}],"count":0,"path":""}],
                             initialTreeDepth: -1,
                             top: '5%',
                             bottom: '10%',
