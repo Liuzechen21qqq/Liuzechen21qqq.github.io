@@ -20,8 +20,8 @@
   <meta name="keywords" content="">
   
     <meta property="og:type" content="website">
-<meta property="og:title" content="Links">
-<meta property="og:url" content="http://example.com/links/index.html">
+<meta property="og:title" content="Archives">
+<meta property="og:url" content="http://example.com/archives/2025/04/index.html">
 <meta property="og:site_name" content="Liu Zechen&#39;s Blog">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Liu Zechen">
@@ -29,7 +29,7 @@
   
   
   
-  <title>Links - Liu Zechen&#39;s Blog</title>
+  <title>Archives - Liu Zechen&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -85,7 +85,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 30vh;">
+<div class="header-inner" style="height: 60vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -203,7 +203,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Links"></span>
+            <span id="subtitle" data-typed-text="Archives"></span>
           
         </div>
 
@@ -230,131 +230,24 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div class="row links">
+<div class="list-group">
+  <p class="h4">13 posts in total</p>
+  <hr>
+  
   
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://www.runoob.com/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/images/rc.png" srcset="/img/loading.gif" lazyload alt="RUNOOB"
-                   onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">RUNOOB</div>
-            <div class="link-intro">菜鸟教程</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
+      
+      <p class="h5">2025</p>
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://www.acwing.com/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/images/acw.jpg" srcset="/img/loading.gif" lazyload alt="ACWing"
-                   onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">ACWing</div>
-            <div class="link-intro">算法训练</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
-    
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://leetcode-cn.com/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/images/leet.png" srcset="/img/loading.gif" lazyload alt="LeetCode"
-                   onerror="this.onerror=null; this.src=this.srcset='/img/avatar.png'"/>
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">LeetCode</div>
-            <div class="link-intro">无情刷题</div>
-          </div>
-        </div>
-      </a>
-    </div>
+    <a href="/2025/04/07/4-7/" class="list-group-item list-group-item-action">
+      <time>04-07</time>
+      <div class="list-group-item-title">47</div>
+    </a>
   
 </div>
 
 
-  <!-- Custom -->
-  <div class="custom mx-auto">
-    <p>数据结构-->计算机组成原理-->操作系统-->计算机网络</p> <p>多刷算法题！</p>
-  </div>
 
-
-<div class="countdown-container">
-    <p>距离考研还剩:</p>
-    <div id="countdown"></div>
-</div>
-
-<script>
-    // 设定目标日期（例如：2025年12月31日）
-    var targetDate = new Date("December 20,25 23:59:59").getTime();
-
-    // 更新倒数日期的函数
-    function updateCountdown() {
-        var now = new Date().getTime();  // 获取当前时间
-        var distance = targetDate - now;  // 计算距离目标日期的毫秒数
-
-        // 计算天数、小时、分钟和秒数
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // 显示倒数日
-        document.getElementById("countdown").innerHTML = days + "天 " + hours + "小时 "
-            + minutes + "分钟 " + seconds + "秒 ";
-
-        // 如果目标日期已经过去
-        if (distance < 0) {
-            clearInterval(interval);  // 停止倒数
-            document.getElementById("countdown").innerHTML = "目标日期已到！";
-        }
-    }
-
-    // 每秒更新一次倒数
-    var interval = setInterval(updateCountdown, 1000);
-</script>
-
-<style>
-    .countdown-container {
-        text-align: center;
-        font-family: 'Arial', sans-serif;
-        margin-top: 30px;
-        background-color: #f0f0f0;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .countdown-container h2 {
-        font-size: 28px;
-        color: #333;
-    }
-    .countdown-container p {
-        font-size: 20px;
-        color: #666;
-    }
-    #countdown {
-        font-size: 24px;
-        font-weight: bold;
-        color: #e74c3c;
-        margin-top: 10px;
-    }
-</style>
 
 
               </div>

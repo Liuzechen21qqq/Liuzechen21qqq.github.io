@@ -743,7 +743,7 @@
                         return result;
                     };
                     
-                    const groupedData = groupByYear([["2025-03-10",4],["2025-03-11",2],["2025-03-12",1],["2025-03-17",1],["2025-03-28",3],["2025-03-31",1]]);
+                    const groupedData = groupByYear([["2025-03-10",4],["2025-03-11",2],["2025-03-12",1],["2025-03-17",1],["2025-03-28",3],["2025-03-31",1],["2025-04-07",1]]);
                     const years = Object.keys(groupedData).reverse();
                     
                     var initYear = parseInt(heatmapChartDom.getAttribute('year')) || new Date().getFullYear();
@@ -859,14 +859,14 @@
                     monthlyChart.setOption({
                         xAxis: { 
                             type: 'category', 
-                            data: ["2025-03"], 
+                            data: ["2025-03","2025-04"], 
                             axisLabel: { fontSize: 14, fontWeight: 'bold', fontFamily: 'Microsoft YaHei, SimSun, serif' }
                         },
                         yAxis: { type: 'value', splitLine: { lineStyle: { type: 'dashed', color: '#ccc' } } },
                         series: [{
                             name: 'Articles',
                             type: 'line',
-                            data: [12],
+                            data: [12,1],
                             smooth: true,
                             lineStyle: { color: '#FF9A8B', width: 2 },
                             itemStyle: { color: '#FF9A8B' },
